@@ -2,7 +2,7 @@
 
 # Created by Donggeun Lim
 # Created on December 2020
-# This program uses a try statement
+# This program uses a while true statement
 
 import random
 
@@ -16,13 +16,14 @@ def main():
         try:
             integer_as_number = int(integer_as_string)
 
-            if random_number == integer_as_number:
+            if integer_as_number < 0:
+                print("This number is a negative")
+            elif random_number == integer_as_number:
                 print("You are right!")
                 print("random number is {}".format(random_number))
                 break
             else:
                 print("you are wrong")
-
         except Exception:
             print("This was not an integer")
 
